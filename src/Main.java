@@ -65,13 +65,12 @@ public class Main {
         System.out.println("Task 6");
         int targetYear1 = 9;
         int contribution3 = 15_000;
-        double monthlyPercent = 0.07f;
-        double sum3 = 0;
+        int sum3 = 0;
         int month3 = 1;
         int totalmonth = targetYear1 * 12;
         for (; month3 <= totalmonth; month3++) {
             sum3 = sum3 + contribution3;
-            sum3 = (int) (sum3 + sum3 * monthlyPercent);
+            sum3 = sum3 + sum3 / 100 * 7;
             if (month3 % 6 == 0) {
                 System.out.println("Василий за " + month3 + " месяца накопил " + sum3 + " рублей");
             }
@@ -87,7 +86,7 @@ public class Main {
         int beginningOfPeriod = 1823;
         int endOfPeriod = 2123;
         for (; beginningOfPeriod <= endOfPeriod; beginningOfPeriod++) {
-            if (beginningOfPeriod % 79 == 0) {
+            if (beginningOfPeriod % cometFlightCycle == 0) {
                 System.out.println(beginningOfPeriod);
             }
         }
